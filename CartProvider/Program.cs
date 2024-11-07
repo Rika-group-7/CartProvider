@@ -1,6 +1,13 @@
+using CartProvider.DataContext;
+using CartProvider.Repository;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddScoped<ICartRepository, CartRepository>();
+builder.Services.AddDbContext<ApiContext>(options =>
+    options.UseInMemoryDatabase("CartDatabase"));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
