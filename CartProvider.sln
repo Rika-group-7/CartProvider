@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CartProvider", "CartProvider\CartProvider.csproj", "{98D9B743-EF8E-4A62-8487-998CCA7FB1B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CartProvider", "CartProvider\CartProvider.csproj", "{98D9B743-EF8E-4A62-8487-998CCA7FB1B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CartProvider.Test", "CartProvider.Test\CartProvider.Test.csproj", "{7C9BCE50-EF18-4E01-82E0-B1D1F9EC149A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{98D9B743-EF8E-4A62-8487-998CCA7FB1B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98D9B743-EF8E-4A62-8487-998CCA7FB1B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98D9B743-EF8E-4A62-8487-998CCA7FB1B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C9BCE50-EF18-4E01-82E0-B1D1F9EC149A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C9BCE50-EF18-4E01-82E0-B1D1F9EC149A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C9BCE50-EF18-4E01-82E0-B1D1F9EC149A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C9BCE50-EF18-4E01-82E0-B1D1F9EC149A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

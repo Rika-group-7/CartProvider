@@ -7,10 +7,3 @@ public class CartItem
     public int Quantity { get; set; }
     public decimal Price { get; set; }
 }
-public class CartList
-{
-    public List<CartItem> Items { get; set;} = new List<CartItem>();
-
-    public decimal TotalCost => Items.Sum(Items => Items.Price * Items.Quantity);
-
-}
