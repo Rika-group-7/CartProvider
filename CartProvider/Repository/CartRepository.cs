@@ -32,11 +32,26 @@ public class CartRepository(ApiContext context) : ICartRepository
 
     public async Task<bool> UpdateQuantity(Guid productId, int newQuantity)
     {
+        var cartItem = await _context.DbCartItems.FirstOrDefaultAsync(e => e.ProductId == productId);
+        if (cartItem == null)
+            return false;
+
+        cartItem.Quantity = newQuantity;
+        _context.DbCartItems.Update(cartItem);
+        await _context.SaveChangesAsync();
+        return true;
 
 
     }
     public async Task<bool> DeleteQuantity(Guid productId) 
     {
+        var cartItem = await _context.DbCartItems.FirstOrDefaultAsync(e => e.ProductId == productId);
+        if(cartItem == null) 
+            return false;
+
+        _context.DbCartItems.Remove(cartItem);
+        await _context.SaveChangesAsync();
+        return true;
 
     }
 
