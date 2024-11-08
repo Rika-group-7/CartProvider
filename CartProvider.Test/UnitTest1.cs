@@ -114,6 +114,8 @@ public class UnitTest1
         var removed = await repository.DeleteQuantity(productId);
 
         //Assert
+        var result = await context.DbCartItems.FirstOrDefaultAsync(x => x.ProductId == productId);
+        Assert.Null(result);
         Assert.True(removed);
         
     }
