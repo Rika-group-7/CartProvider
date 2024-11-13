@@ -1,9 +1,7 @@
 using CartProvider.DataContext;
 using CartProvider.Models;
 using CartProvider.Repository;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Xunit.Abstractions;
 
 namespace CartProvider.Test;
 
@@ -11,7 +9,8 @@ public class UnitTest1
 {
     private static ApiContext GetInMemoryDataContext()
     {
-        var option = new DbContextOptionsBuilder<ApiContext>().UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString()).Options;
+        var option = new DbContextOptionsBuilder<ApiContext>()
+            .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString()).Options;
 
         return new ApiContext(option);
 
